@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+	<String Id="ProductName_x86">Calculator APP (32 bit)</String>
+	<String Id="ProductName_x64">Calculator APP (64 bit)</String>
+	<String Id="Language">1033</String>
+	<String Id="Manufacturer">Ahmed Khalil</String>
+	<String Id="DowngradeErrorMessage">A newer version of [ProductName] is already installed.</String>
+	<String Id="InstallProgramFolderName">AKCalculator</String>
+</WixLocalization>

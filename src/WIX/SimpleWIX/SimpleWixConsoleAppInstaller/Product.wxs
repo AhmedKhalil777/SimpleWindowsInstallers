@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?if $(var.Platform)=x64?>
+	<?define ProductCode= "{5A1C8E58-54DA-42E9-B238-F178E20E240F}"?>
+	<?else?>
+	<?define ProductCode= "{9D74F090-2DC6-472D-A26B-70B21C4E759C}"?>
+	<?endif?>
+		
+    <Product Id="$(var.ProductCode)"
+			 Name="!(loc.ProductName_$(var.Platform))"
+			 Language="!(loc.Language)" 
+			 Version="$(var.BuildVersion)"
+			 Manufacturer="!(loc.Manufacturer)" 
+			 UpgradeCode="83b29525-3ccb-4f3d-8820-5a741c210a8c">
+		
+        <Package InstallerVersion="200" 
+				 Compressed="yes" 
+				 InstallScope="perMachine"
+				 Platform="$(var.Platform)"
+				 Manufacturer="!(loc.Manufacturer)" 
+				 />
+        <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+        <MediaTemplate EmbedCab="yes" />
+		<!--ICON-->
+		<Icon Id="icon.ico" SourceFile="$(var.SimpleWIX.ConsoleApp.ProjectDir)\icon.ico"/>
+		<!--Use icon.ico for this installer (shows up in Add/Remove Program)-->
+		<Property Id="APPPRODUCTION">icon.ico</Property>
+		<Property Id="APPURLINFOABOUT">https://github.com/AhmedKhalil777</Property>
+
+		<!--UI-->
+		<UIRef Id="WixUI_Minimal"/>
+		<WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp" />
+		<WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp" />
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\CalculatorLicense.rtf" />
+		
+		
+        <Feature Id="ProductFeature" Title="SimpleWixConsoleAppInstaller" Level="1">
+            <ComponentGroupRef Id="ProductComponents" />
+            <ComponentGroupRef Id="PublishedComponents" />
+        </Feature>
+    </Product>
+</Wix> 
