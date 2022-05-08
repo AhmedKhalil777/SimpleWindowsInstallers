@@ -3,8 +3,8 @@
 	<Fragment>
 	 <Directory Id="TARGETDIR" Name="SourceDir">
 
-		 <Directory Id="ProgamMenuFolder">
-			 <Directory Id="InstallProgramMenuFolder" Name="!(loc.InstallProgramFolderName)"></Directory>
+		 <Directory Id="ProgramMenuFolder">
+			 <Directory Id="ApplicationProgramsFolder" Name="!(loc.InstallProgramFolderName)"/>
 		 </Directory>
 					 
 		<?if $(var.Platform)=x64?>
