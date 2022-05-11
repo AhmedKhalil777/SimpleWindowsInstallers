@@ -47,6 +47,7 @@ namespace SimpleWIX.WorkerTCPService
                     stream.Write(msg, 0, msg.Length);
                     _logger.LogInformation(">> Send : " + data);
 
+                    await Task.Delay(4000);
                     i = stream.Read(_bytes, 0, _bytes.Length);
                 }
 

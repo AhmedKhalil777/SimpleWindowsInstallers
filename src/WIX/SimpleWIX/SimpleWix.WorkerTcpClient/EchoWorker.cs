@@ -34,10 +34,17 @@ namespace SimpleWix.WorkerTcpClient
  
                     networkStream.Write(bytes, 0, bytes.Length);
                     _logger.LogInformation(">> Send: " + message);
-                    var i = networkStream.Read(_bytes, 0, _bytes.Length);
-                    var data = System.Text.Encoding.UTF8.GetString(_bytes, 0, i);
-                    _logger.LogInformation(">> Recieved: " +data );
 
+
+                    // To run outside the Synchrounous process
+                    _ = Task.Run(() =>
+                    {
+                        var i = networkStream.Read(_bytes, 0, _bytes.Length);
+                        var data = System.Text.Encoding.UTF8.GetString(_bytes, 0, i);
+                        _logger.LogInformation(">> Recieved: " + data);
+                    }, stoppingToken);
+
+                    // run before previous code
                     await Task.Delay(1000, stoppingToken);
                 }
             }
