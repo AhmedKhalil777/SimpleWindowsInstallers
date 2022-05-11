@@ -19,6 +19,8 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SimpleWixWorkerServiceWithT
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SimpleWixWpfTcpClientInstaller", "SimpleWixWpfTcpClientInstaller\SimpleWixWpfTcpClientInstaller.wixproj", "{CAD1512A-01BD-4AAB-8296-E73171B66CC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWix.WorkerTcpClient", "SimpleWix.WorkerTcpClient\SimpleWix.WorkerTcpClient.csproj", "{7E0D395F-CC54-4704-BD28-7531A6E0364D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,18 @@ Global
 		{CAD1512A-01BD-4AAB-8296-E73171B66CC8}.Release|x64.Build.0 = Release|x86
 		{CAD1512A-01BD-4AAB-8296-E73171B66CC8}.Release|x86.ActiveCfg = Release|x86
 		{CAD1512A-01BD-4AAB-8296-E73171B66CC8}.Release|x86.Build.0 = Release|x86
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Debug|x64.Build.0 = Debug|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Release|x64.ActiveCfg = Release|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Release|x64.Build.0 = Release|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +124,7 @@ Global
 		{49E16EB6-5828-4518-9A8D-C207E0CA934E} = {123D9B70-0AA9-41F0-BCD0-15299F65C510}
 		{E1B7D021-32C6-4483-AFF9-F8FD9E3F6650} = {8CDB6FC2-D0EB-48BC-BA25-27460B267E29}
 		{CAD1512A-01BD-4AAB-8296-E73171B66CC8} = {8CDB6FC2-D0EB-48BC-BA25-27460B267E29}
+		{7E0D395F-CC54-4704-BD28-7531A6E0364D} = {123D9B70-0AA9-41F0-BCD0-15299F65C510}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66473DD5-0BEC-4232-97DA-804B69CE0940}
